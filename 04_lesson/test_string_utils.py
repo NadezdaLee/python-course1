@@ -63,3 +63,8 @@ def test_delete_symbol_negative(input_str, symbol, expected):
 
 def test_contains_empty_symbol():
     assert string_utils.contains("SkyPro", "") is False
+
+
+def test_contains_empty_symbol():
+    """Тест для пустой подстроки — ожидается True (пустая строка содержится в любой строке)."""
+    assert string_utils.contains("SkyPro", "") is True
