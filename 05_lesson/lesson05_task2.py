@@ -12,7 +12,8 @@ try:
 
     # Ожидание кнопки и клик (используем CSS‑селектор без ID)
     wait = WebDriverWait(driver, 10)
-    button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button.btn")))
+    button = wait.until(
+        EC.element_to_be_clickable((By.CSS_SELECTOR, "button.btn")))
     button.click()
 
     print("Кнопка успешно нажата")

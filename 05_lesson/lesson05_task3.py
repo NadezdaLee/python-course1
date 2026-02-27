@@ -12,7 +12,9 @@ try:
 
     # Ожидание поля ввода
     wait = WebDriverWait(driver, 10)
-    input_field = wait.until(EC.presence_of_element_located((By.TAG_NAME, "input")))
+    input_field = wait.until(
+        EC.presence_of_element_located(
+            (By.TAG_NAME, "input")))
 
     # Ввод текста "Sky"
     input_field.send_keys("Sky")
@@ -24,7 +26,6 @@ try:
     input_field.send_keys("Pro")
 
     print("Операции с полем ввода выполнены")
-
 finally:
     # Закрытие браузера
     driver.quit()

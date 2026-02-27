@@ -13,7 +13,8 @@ try:
     # Ожидание появления поля username и ввод логина
     wait = WebDriverWait(driver, 10)
     username_field = wait.until(
-        EC.presence_of_element_located((By.ID, "username"))
+        EC.presence_of_element_located(
+            (By.ID, "username"))
     )
     username_field.send_keys("tomsmith")
 
@@ -22,12 +23,14 @@ try:
     password_field.send_keys("SuperSecretPassword!")
 
     # Нажатие кнопки Login
-    login_button = driver.find_element(By.CSS_SELECTOR, "button[type='submit']")
+    login_button = driver.find_element(
+        By.CSS_SELECTOR, "button[type='submit']")
     login_button.click()
 
     # Ожидание появления сообщения об успешном входе
     success_message = wait.until(
-        EC.visibility_of_element_located((By.CSS_SELECTOR, ".flash.success"))
+        EC.visibility_of_element_located(
+            (By.CSS_SELECTOR, ".flash.success"))
     )
 
     # Очищаем текст от символа закрытия (×) и лишних пробелов
