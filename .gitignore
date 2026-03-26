@@ -1,3 +1,5 @@
 __pycache__/
 chromedriver/*driver*.zip
 firefoxdriver/*driver*.zip
+config.env
+.env
