@@ -1,5 +1,13 @@
 __pycache__/
+*.pyc
+
+allure-results/
+allure-report/
+
 chromedriver/*driver*.zip
 firefoxdriver/*driver*.zip
+
 config.env
 .env
+
+error_test_*.png
